@@ -1,0 +1,26 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>item-list</ion-title>
+    <ion-buttons end>
+      <button navPush="ItemAddPage"  ion-button>
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list>
+        <ion-list-header>item</ion-list-header>
+        <ion-item *ngFor="let item of collection " 
+        detail-push navPush="ItemEditPage" [navParams]="{item : item}"> 
+          {{item.name}}
+        </ion-item>
+      </ion-list>
+
+</ion-content>
